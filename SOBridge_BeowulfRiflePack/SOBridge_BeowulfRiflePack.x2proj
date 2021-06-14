@@ -22,9 +22,6 @@
     <Content Include="Config\XComTemplateEditor.ini">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Config\XComWeaponTuning.ini">
-      <SubType>Content</SubType>
-    </Content>
     <Content Include="ReadMe.txt" />
     <Content Include="ModPreview.jpg" />
   </ItemGroup>
