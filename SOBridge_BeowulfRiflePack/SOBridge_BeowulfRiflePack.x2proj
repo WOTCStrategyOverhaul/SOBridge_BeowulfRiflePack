@@ -11,19 +11,31 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Config\" />
+    <Folder Include="Src" />
+    <Folder Include="Src\SOBridge_BeowulfRiflePack" />
+    <Folder Include="Src\SOBridge_BeowulfRiflePack\Classes" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Config\XComEditor.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComEngine.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComGame.ini">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Config\XComInfiltration.ini">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Config\XComStrategyTuning.ini">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Config\XComTemplateEditor.ini">
-      <SubType>Content</SubType>
-    </Content>
     <Content Include="ReadMe.txt" />
     <Content Include="ModPreview.jpg" />
+    <Content Include="Src\SOBridge_BeowulfRiflePack\Classes\X2DownloadableContentInfo_SOBridge_BeowulfRiflePack.uc">
+      <SubType>Content</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildLocalExtensionPath)\XCOM2.targets" />
 </Project>
