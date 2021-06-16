@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Guid>9fb3b934-4068-40e5-9f87-b4d33ae29caa</Guid>
@@ -7,23 +7,35 @@
     <SteamPublishID>0</SteamPublishID>
     <AssemblyName>SOBridge_BeowulfRiflePack</AssemblyName>
     <RootNamespace>SOBridge_BeowulfRiflePack</RootNamespace>
-	<ProjectGuid>{6DD3F277-B923-4417-AFDB-D4097AA64FDF}</ProjectGuid>
+    <ProjectGuid>{6DD3F277-B923-4417-AFDB-D4097AA64FDF}</ProjectGuid>
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Config\" />
+    <Folder Include="Src" />
+    <Folder Include="Src\SOBridge_BeowulfRiflePack" />
+    <Folder Include="Src\SOBridge_BeowulfRiflePack\Classes" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Config\XComEditor.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComEngine.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComGame.ini">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Config\XComInfiltration.ini">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Config\XComStrategyTuning.ini">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Config\XComWeaponTuning.ini">
-      <SubType>Content</SubType>
-    </Content>
     <Content Include="ReadMe.txt" />
     <Content Include="ModPreview.jpg" />
+    <Content Include="Src\SOBridge_BeowulfRiflePack\Classes\X2DownloadableContentInfo_SOBridge_BeowulfRiflePack.uc">
+      <SubType>Content</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildLocalExtensionPath)\XCOM2.targets" />
 </Project>
