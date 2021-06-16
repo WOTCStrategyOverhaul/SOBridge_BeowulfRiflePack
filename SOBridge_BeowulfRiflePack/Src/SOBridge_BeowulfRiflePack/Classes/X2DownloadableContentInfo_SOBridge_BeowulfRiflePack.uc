@@ -17,28 +17,31 @@ var config array<name> arrWeaponTemplateName;
 /// </summary>
 static event OnPostTemplatesCreated()
 {
+    local array<X2DataTemplate> DifficultyVariants;
     local X2ItemTemplateManager ItemTemplateManager;    
-    local X2ItemTemplate ItemTemplate;    
     local X2WeaponTemplate WeaponTemplate;
+    local X2DataTemplate DataTemplate;
     local name WeaponTemplateToUpdate;
     
     ItemTemplateManager = class'X2ItemTemplateManager'.static.GetItemTemplateManager();
 
     foreach default.arrWeaponTemplateName(WeaponTemplateToUpdate)
     {
-        // Original mod does not have difficulty variant
-        ItemTemplate = ItemTemplateManager.FindItemTemplate(WeaponTemplateToUpdate);
+        ItemTemplateManager.FindDataTemplateAllDifficulties(WeaponTemplateToUpdate, DifficultyVariants);
 
-        // Since this is a bridge mod for specific mod, 100% confident this is an X2WeaponTemplate        
-        WeaponTemplate = X2WeaponTemplate(ItemTemplate);
-
-        if (WeaponTemplate != none)
+        foreach DifficultyVariants(DataTemplate)
         {
-            // Reset SpecialRequirementsFn
-            if (WeaponTemplate.Requirements.SpecialRequirementsFn != none)
-            {                    
-                WeaponTemplate.Requirements.SpecialRequirementsFn = "";                 
-            }
-        }        
+            // Since this is a bridge mod for specific mod, 100% confident this is an X2WeaponTemplate        
+            WeaponTemplate = X2WeaponTemplate(DataTemplate);
+
+            if (WeaponTemplate != none)
+            {
+                // Reset SpecialRequirementsFn
+                if (WeaponTemplate.Requirements.SpecialRequirementsFn != none)
+                {                    
+                    WeaponTemplate.Requirements.SpecialRequirementsFn = "";   
+                }
+            }   
+        }     
     }
 }
