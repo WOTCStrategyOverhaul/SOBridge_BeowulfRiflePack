@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //---------------------------------------------------------------------------------------
 //  FILE:   XComDownloadableContentInfo_SOBridge_BeowulfRiflePack.uc                                    
 //           
@@ -8,13 +9,18 @@
 //  Copyright (c) 2016 Firaxis Games, Inc. All rights reserved.
 //---------------------------------------------------------------------------------------
 
+=======
+>>>>>>> fee4898524b4ec207c58aedc5d7ea42cc9951354
 class X2DownloadableContentInfo_SOBridge_BeowulfRiflePack extends X2DownloadableContentInfo;
 
 var config array<name> arrWeaponTemplateName;
 
+<<<<<<< HEAD
 /// <summary>
 /// Called after the Templates have been created (but before they are validated) while this DLC / Mod is installed.
 /// </summary>
+=======
+>>>>>>> fee4898524b4ec207c58aedc5d7ea42cc9951354
 static event OnPostTemplatesCreated()
 {
     local array<X2DataTemplate> DifficultyVariants;
